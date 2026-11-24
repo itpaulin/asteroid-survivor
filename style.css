@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #080b12;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    text-align: center;
+    width: 90%;
+    max-width: 950px;
+}
+
+h1{
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    color: #00e5ff;
+}
+
+canvas{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #05070c;
+    border: 2px solid #00e5ff;
+    border-radius: 5px;
+}
+
+p{
+    margin-top: 15px;
+    color: #aab4c5;
+    font-size: 14px;
+}
+
+
+.game-container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.game-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+}
+
+.game-overlay[hidden],
+.menu-panel[hidden] {
+    display: none;
+}
+
+.menu-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+}
+
+.menu-panel h2 {
+    color: #00e5ff;
+    font-size: 36px;
+    text-shadow: 0 0 12px #00e5ff;
+}
+
+.menu-panel p {
+    color: white;
+}
+
+.menu-panel button {
+    padding: 12px 28px;
+
+    background: transparent;
+    border: 2px solid #00e5ff;
+    border-radius: 6px;
+
+    color: #00e5ff;
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-panel button:hover {
+    background: #00e5ff;
+    color: #000;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+
+.controls-panel {
+    max-width: 650px;
+    margin: 25px auto 0;
+    padding: 18px 22px;
+
+    background: rgba(0, 229, 255, 0.04);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 8px;
+}
+
+.controls-panel h2 {
+    margin-bottom: 16px;
+
+    color: #00e5ff;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 25px;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.control-action {
+    color: #e0e8f5;
+    font-size: 14px;
+}
+
+.control-keys {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #8997aa;
+    font-size: 12px;
+}
+
+.control-keys kbd {
+    min-width: 30px;
+    padding: 6px 9px;
+
+    background: #151e2d;
+    border: 1px solid #00aabd;
+    border-radius: 5px;
+
+    color: #00e5ff;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+
+    box-shadow: 0 0 6px rgba(0, 229, 255, 0.15);
+}
+
+@media (max-width: 600px) {
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .controls-panel {
+        padding: 16px;
+    }
+}

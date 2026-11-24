@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Survivor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+<main>
+    <h1>ASTEROID SURVIVOR</h1>
+
+    <div class="game-container">
+        <canvas id="gameCanvas" width="900" height="600"></canvas>
+
+        <div id="gameOverlay" class="game-overlay">
+            <div id="menuPanel" class="menu-panel">
+                <h2>ASTEROID SURVIVOR</h2>
+                <button id="startButton">Iniciar Jogo</button>
+            </div>
+
+            <div id="pausePanel" class="menu-panel" hidden>
+                <h2>JOGO PAUSADO</h2>
+                <button id="resumeButton">Retomar</button>
+                <button id="restartButton">Reiniciar</button>
+            </div>
+
+            <div id="gameOverPanel" class="menu-panel" hidden>
+                <h2>GAME OVER</h2>
+                <p>Você perdeu todas as vidas!</p>
+                <button id="tryAgainButton">Tentar Novamente</button>
+            </div>
+        </div>
+    </div>
+        
+    <section class="controls-panel">
+        <h2>CONTROLES</h2>
+
+        <div class="controls-grid">
+            <div class="control-item">
+                <span class="control-action">Acelerar nave</span>
+                <div class="control-keys">
+                    <kbd>W</kbd>
+                    <span>ou</span>
+                    <kbd>↑</kbd>
+                </div>
+            </div>
+
+            <div class="control-item">
+                <span class="control-action">Girar à esquerda</span>
+                <div class="control-keys">
+                    <kbd>A</kbd>
+                    <span>ou</span>
+                    <kbd>←</kbd>
+                </div>
+            </div>
+
+            <div class="control-item">
+                <span class="control-action">Girar à direita</span>
+                <div class="control-keys">
+                    <kbd>D</kbd>
+                    <span>ou</span>
+                    <kbd>→</kbd>
+                </div>
+            </div>
+
+            <div class="control-item">
+                <span class="control-action">Pausar / Retomar</span>
+                <div class="control-keys">
+                    <kbd>ESC</kbd>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
